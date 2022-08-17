@@ -11,7 +11,6 @@
 <br>
 <br>
 
-
 <%--for showDetails--%>
 <%--Your name: ${param.employeeName}--%>
 <%--Your Surname: ${param.employeeSurname}--%>
