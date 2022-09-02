@@ -4,9 +4,7 @@ package com.valleybee.spring.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -66,8 +64,11 @@ public class myContreller {
         model.addAttribute("emp", new Employee());
         return "ask-emp-details-view2";
     }
-
-    @RequestMapping("/showDetails2")
+/* @PostMapping for post method  <form:form action="showDetails2" modelAttribute="emp" method="get">
+*  @GetMapping for GET
+*  @RequestMapping  for any methods
+* */
+    @GetMapping(path = "/showDetails2")
     public String showDetails2(@Valid @ModelAttribute("emp") Employee employee, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "ask-emp-details-view2";

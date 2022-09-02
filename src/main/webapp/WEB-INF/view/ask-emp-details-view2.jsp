@@ -17,7 +17,7 @@
 <br>
 <br>
 
-<form:form action="showDetails2" modelAttribute="emp">
+<form:form action="showDetails2" modelAttribute="emp" method="get">
 
     Name = <form:input path="name"/>
     <form:errors path="name" />
